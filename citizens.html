@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Граждане и лояльность — CITY-8</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand">
+    <div class="logo"></div>
+    <div class="brand-text">
+      <h1>CITY-8 Encyclopedia</h1>
+      <p>Официальная энциклопедия Гражданского Союза</p>
+    </div>
+  </div>
+  
+<nav class="nav">
+  <a href="index.html">Главная</a>
+  <a href="history.html">История</a>
+  <a href="structure.html">Структура</a>
+  <a href="citizens.html">Граждане</a>
+  <a href="laws.html">Законы</a>
+  <a href="tech.html">Технологии</a>
+  <a href="factions.html">Организации</a>
+  <a href="guides.html">Руководства</a>
+  <a href="ota_orders.html">Приказы OTA</a>
+  <a href="news.html">Новости</a>
+</nav>
+
+</header>
+<main class="container">
+
+<section class="panel" id="classes">
+  <h2>Классы граждан</h2>
+  <table>
+    <tr><th>Класс</th><th>Статус</th><th>Описание</th></tr>
+    <tr><td>0</td><td>Анти-граждане</td><td>Лица, утратившие лояльность; изоляция/переквалификация по T-Code.</td></tr>
+    <tr><td>1</td><td>Низший класс</td><td>Базовые услуги, наблюдение при низкой лояльности.</td></tr>
+    <tr><td>2</td><td>Рабочие ГСР</td><td>Трудовые специалисты, доступ к объектам снабжения.</td></tr>
+    <tr><td>3</td><td>Лояльные граждане</td><td>Улучшенные квоты/жильё при лояльности 100+.</td></tr>
+    <tr><td>4</td><td>Административные кадры</td><td>Руководящие лица, учёные, высокие ранги ГО.</td></tr>
+  </table>
+</section>
+
+<section class="panel" id="loyalty">
+  <h2>Система лояльности (0–200)</h2>
+  <div class="grid grid-2">
+    <div class="panel">
+      <h3>Интерпретация значений</h3>
+      <ul>
+        <li><span class="badge danger">0</span> — объявление анти-гражданином, изоляция/T-Code.</li>
+        <li>1–49 — низкая лояльность, ограничения и наблюдение.</li>
+        <li>50–99 — стабильный статус, базовые права.</li>
+        <li><span class="badge ok">100–199</span> — повышенные пайки, улучшенное жильё, расширенный доступ к рабочим местам.</li>
+        <li><span class="badge ok">200</span> — кандидат на награждение и административные должности.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Начисление очков</h3>
+      <ul>
+        <li>Участие в мероприятиях по распоряжению Администрации.</li>
+        <li>Информирование о нарушителях, помощь в предотвращении угроз.</li>
+        <li>Исполнение приказов сотрудников ГО/Администрации.</li>
+        <li>Высокие трудовые показатели (ГСР) и общественная активность.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="panel">
+      <h3>Снижение очков</h3>
+      <ul>
+        <li>Нарушения C-Code/A-Code.</li>
+        <li>Несотрудничество с ГО, отказ подчиняться законным требованиям.</li>
+        <li>Связи с нелегальными организациями, саботаж.</li>
+        <li>Повторные дисциплинарные проступки.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Процедура фиксации</h3>
+      <ol>
+        <li>В карточке CID указывается новая сумма, причина, офицер, дата.</li>
+        <li>Изменение &gt; 50 пунктов — только по письменному приказу старшего офицера/Администрации.</li>
+        <li>Все операции журналируются; доступ из Отдела Лояльности.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Примеры решений</h3>
+    <table>
+      <tr><th>Ситуация</th><th>Действие</th><th>Изменение</th></tr>
+      <tr><td>Гражданин сообщил о складе контрабанды</td><td>Награждение</td><td>+15…+30</td></tr>
+      <tr><td>Отказ предъявить документы</td><td>Предупреждение/задержание</td><td>-10…-25</td></tr>
+      <tr><td>Отличился на работах ГСР</td><td>Премия</td><td>+5…+20</td></tr>
+      <tr><td>Повторный мелкий дебош</td><td>Штраф/изоляция</td><td>-10…-40</td></tr>
+    </table>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  © Администрация City-8, 2025. Все права защищены.
+</footer>
+</body>
+</html>

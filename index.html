@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Главная — CITY-8</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand">
+    <div class="logo"></div>
+    <div class="brand-text">
+      <h1>CITY-8 Encyclopedia</h1>
+      <p>Официальная энциклопедия Гражданского Союза</p>
+    </div>
+  </div>
+  
+<nav class="nav">
+  <a href="index.html">Главная</a>
+  <a href="history.html">История</a>
+  <a href="structure.html">Структура</a>
+  <a href="citizens.html">Граждане</a>
+  <a href="laws.html">Законы</a>
+  <a href="tech.html">Технологии</a>
+  <a href="factions.html">Организации</a>
+  <a href="guides.html">Руководства</a>
+  <a href="ota_orders.html">Приказы OTA</a>
+  <a href="news.html">Новости</a>
+</nav>
+
+</header>
+<main class="container">
+
+<section class="panel">
+  <h2>Добро пожаловать</h2>
+  <p>Энциклопедия City-8 — официальный справочник по устройству города, законам, лояльности, подразделениям и процедурам. Сайт статический (GitHub Pages/любой хостинг). Редактировать может только владелец репозитория.</p>
+  <div class="grid grid-3">
+    <div class="panel"><h3>Законы и кодексы</h3><p>Полный свод C-Code, A-Code, T-Code с санкциями и процедурами.</p><a href="laws.html">Открыть →</a></div>
+    <div class="panel"><h3>Система лояльности</h3><p>Подробная модель 0–200, основания начисления/снятия, примеры.</p><a href="citizens.html#loyalty">Открыть →</a></div>
+    <div class="panel"><h3>Приказы OTA</h3><p>Шаблоны приказов, уровни эскалации, радиокоды, алгоритмы зачистки.</p><a href="ota_orders.html">Открыть →</a></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Быстрый поиск</h2>
+  <div class="search"><input id="q" placeholder="Искать по страницам (например, 'C-3.1', 'OTA зачистка', 'Комбайн-Барьер')"></div>
+  <div class="note">Поиск работает по заголовкам и ссылкам. Для полнотекстового поиска используй Ctrl+F на каждой странице.</div>
+  <div id="results" class="grid grid-2"></div>
+</section>
+
+<script>
+const pages=[
+  {t:'История',u:'history.html',k:'семичасовая война устройство city-8 сектора'},
+  {t:'Структура',u:'structure.html',k:'ГО ГСР Медицинский Центр OTA Администрация звания полномочия'},
+  {t:'Граждане и лояльность',u:'citizens.html',k:'классы граждан лояльность 0-200 начисление снятие процедуры'},
+  {t:'Законы',u:'laws.html',k:'c-code a-code t-code наказания санкции процедуры'},
+  {t:'Технологии',u:'tech.html',k:'комбайн-барьер поле подавления сканеры биокупола'},
+  {t:'Организации',u:'factions.html',k:'ГО OTA ГСР Медцентр Сопротивление принадлежность цели'},
+  {t:'Руководства',u:'guides.html',k:'проверка документов отчеты лояльность медотчет события'},
+  {t:'Приказы OTA',u:'ota_orders.html',k:'эскалация очистка зачистка правила ROE радиокоды'},
+  {t:'Новости',u:'news.html',k:'хроника инциденты записи администратор'}
+];
+const q=document.getElementById('q'); const res=document.getElementById('results');
+q.addEventListener('input',()=>{
+  const s=q.value.toLowerCase(); res.innerHTML='';
+  if(!s) return;
+  pages.filter(p=> (p.t+p.k).toLowerCase().includes(s)).forEach(p=>{
+    const div=document.createElement('div'); div.className='panel';
+    div.innerHTML=`<h3>${p.t}</h3><p class='muted'>${p.k}</p><a href='${p.u}'>Открыть →</a>`;
+    res.appendChild(div);
+  });
+});
+</script>
+
+</main>
+<footer class="footer">
+  © Администрация City-8, 2025. Все права защищены.
+</footer>
+</body>
+</html>

@@ -1,1 +1,2 @@
-# city8-wiki
+# City-8 Encyclopedia
+Статический сайт.
